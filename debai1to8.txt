@@ -1,0 +1,84 @@
+Bài 1: Quản lý cho thuê sách
+Hãy thiết kế một CSDL trên MS Access đặt tên QLThueSach.accdb để quản lý việc cho thuê sách gồm 3 bảng theo miêu tả sau:
+•	Bảng SÁCH: gồm các field mã sách (text 10), tên sách (text 50), tác giả (text 50), tên nhà xuất bản (text 50), giá mua vào (currency), ghi chú (long text). Field mã sách là khóa chính.
+•	Bảng LOẠI SÁCH: gồm các field mã loại sách (text 10), tên loại sách (text 100), miêu tả loại sách (text 255)
+•	Bảng KHÁCH HÀNG: gồm các field mã khách hàng (auto number), tên khách hàng (text 50), địa chỉ (text 100), số điện thoại (text 12), loại sách yêu thích (text 100), ghi chú (long text). Field mã khách hàng là khóa chính.
+•	Bảng THUÊ SÁCH: gồm các field mã khách hàng (number, long), mã sách (text 10), ngày giờ mượn sách (Date/Time), ngày giờ trả sách (Date/Time), số tiền thuê (currency), ghi chú (long text). 3 field mã khách hàng, mã sách và ngày giờ mượn sách là khóa chính. 
+•	Bảng sách quan hệ với bảng loại sách qua field mã loại sách.
+•	Bảng thuê sách quan hệ với bảng khách hàng qua field mã khách hàng.
+•	Bảng thuê sách quan hệ với bảng sách qua field mã sách.
+•	Field mã loại sách trong bảng sách lookup đến field mã loại sách trong bảng loại sách, nhập liệu bằng 1 combo box gồm 2 cột mã loại sách (bound column) và tên loại sách.
+•	Field mã khách hàng trong bảng thuê sách lookup đến field mã khách hàng trong bảng khách hàng, nhập liệu bằng 1 combo box gồm 2 cột mã khách hàng (bound column) và tên khách hàng. 
+•	Field mã sách trong bảng thuê sách lookup đến field mã sách trong bảng sách, nhập liệu bằng 1 combo box gồm 2 cột mã sách (bound column) và tên sách.   
+ Chú ý: sau khi thiết kế CSDL hãy nhập dữ liệu cho 3 bảng, mỗi bảng ít nhất 3 records. 
+Bài 2: Quản lý cho thuê đĩa nhạc, phim
+Hãy thiết kế một CSDL trên MS Access đặt tên QLThueDia.accdb để quản lý việc cho thuê đĩa gồm 3 bảng theo miêu tả sau:
+•	Bảng ĐĨA: gồm các field mã đĩa (text 10), tên đĩa (text 50), thể loại (text 20), tên nước sản xuất (text 20), giá mua vào (currency), ghi chú (long text). Field mã đĩa là khóa chính.
+•	Bảng KHÁCH HÀNG: gồm các field mã khách hàng (auto number), tên khách hàng (text 50), địa chỉ (text 100), số điện thoại (text 12), thể loại yêu thích (text 20), ghi chú (long text). Field mã khách hàng là khóa chính.
+•	Bảng THUÊ ĐĨA: gồm các field mã khách hàng (number, long), mã đĩa (text 10), ngày giờ thuê (Date/Time), ngày giờ trả (Date/Time), số tiền thu (currency), ghi chú (long text). 3 field mã khách hàng, mã đĩa và ngày giờ thuê là khóa chính. 
+•	Bảng thuê đĩa quan hệ với bảng khách hàng qua field mã khách hàng. Bảng thuê đĩa quan hệ với bảng đĩa qua field mã đĩa.
+•	Field mã khách hàng trong bảng thuê đĩa lookup đến field mã khách hàng trong bảng khách hàng qua 1 combo box gồm 2 cột mã khách hàng (bound column) và tên khách hàng. Field mã đĩa trong bảng thuê đĩa lookup đến field mã đĩa trong bảng đĩa qua 1 combo box gồm 2 cột mã đĩa (bound column) và tên đĩa.   
+ Chú ý: sau khi thiết kế CSDL hãy nhập dữ liệu cho 3 bảng, mỗi bảng ít nhất 3 records.
+Bài 3: Quản lý cho thuê phòng
+Hãy thiết kế một CSDL trên MS Access đặt tên QLThuePhong.accdb để quản lý việc cho thuê phòng ở một khách sạn, gồm 3 bảng theo miêu tả sau:
+•	Bảng PHÒNG: gồm các field mã phòng (text 10), số giường (number), họ tên nhân viên phụ trách (text 50), giá tiền (currency), ghi chú (long text). Field mã phòng là khóa chính.
+•	Bảng KHÁCH HÀNG: gồm các field mã khách hàng (auto number), tên khách hàng (text 50), địa chỉ (text 100), số điện thoại (text 12), ghi chú (long text). Field mã khách hàng là khóa chính.
+•	Bảng THUÊ PHÒNG: gồm các field mã khách hàng (number, long), mã phòng (text 10), ngày lấy phòng (Date/Time), ngày trả phòng (Date/Time), số tiền đã trả (currency), ghi chú (long text). 3 field mã khách hàng, mã phòng và ngày lấy phòng là khóa chính. 
+•	Bảng thuê phòng quan hệ với bảng khách hàng qua field mã khách hàng. Bảng thuê phòng quan hệ với bảng phòng qua field mã phòng.
+•	Field mã khách hàng trong bảng thuê phòng lookup đến field mã khách hàng trong bảng khách hàng qua 1 combo box gồm 2 cột mã khách hàng (bound column) và tên khách hàng. Field mã phòng trong bảng thuê phòng lookup đến field mã phòng trong bảng phòng qua 1 combo box gồm 2 cột mã phòng (bound column) và số giường.   
+ Chú ý: sau khi thiết kế CSDL hãy nhập dữ liệu cho 3 bảng, mỗi bảng ít nhất 3 records. 
+Bài 4: Quản lý cho thuê sân quần vợt
+Hãy thiết kế một CSDL trên MS Access đặt tên QLThueSan.accdb để quản lý việc cho thuê sân quần vợt gồm 3 bảng theo miêu tả sau:
+•	Bảng SÂN: gồm các field mã sân (text 10), tình trạng (text 50), giá thuê (currency), ghi chú (long text). Field mã sân là khóa chính.
+•	Bảng KHÁCH HÀNG: gồm các field mã khách hàng (auto mumber), tên khách hàng (text 50), địa chỉ (text 100), số điện thoại (text 12), ghi chú (long text). Field mã khách hàng là khóa chính.
+•	Bảng THUÊ SÂN: gồm các field mã khách hàng (number, long), mã sân (text 10), ngày giờ thuê (Date/Time), ngày giờ trả (Date/Time), số tiền thu (currency), ghi chú (long text). 3 field mã khách hàng, mã sân và ngày giờ thuê là khóa chính. 
+•	Bảng thuê sân quan hệ với bảng khách hàng qua field mã khách hàng. Bảng thuê sân quan hệ với bảng sân qua field mã sân.
+•	Field mã khách hàng trong bảng thuê sân lookup đến field mã khách hàng trong bảng khách hàng qua 1 combo box gồm 2 cột mã khách hàng (bound column) và tên khách hàng. Field mã sân trong bảng thuê sân lookup đến field mã sân trong bảng sân qua 1 combo box gồm 2 cột mã sân (bound column) và tình trạng.   
+ Chú ý: sau khi thiết kế CSDL hãy nhập dữ liệu cho 3 bảng, mỗi bảng ít nhất 3 records.
+Bài 5: Quản lý nhân sự các dự án
+Hãy thiết kế một CSDL trên MS Access đặt tên QLNhanSu.accdb để quản lý nhân sự cho các dự án trong công ty phần mềm Powersoft theo các miêu tả sau:
+•	Mỗi nhân viên có thể tham gia vào nhiều dự án phần mềm và mỗi dự án phần mềm có nhiều nhân viên tham gia.
+•	Thông tin về nhân viên gồm: mã nhân viên, tên nhân viên, bằng cấp chuyên môn, năm sinh, địa chỉ, chức vụ.
+•	Thông tin về mỗi dự án phần mềm gồm: mã dự án, tên dự án, ngày dự kiến bắt đầu, ngày bắt đầu, ngày dự kiến kết thúc, ngày kết thúc, các ghi chú.
+•	Đối với một nhân viên tham gia một dự án, CSDL phải lưu được ngày bắt đầu tham gia, ngày kết thúc, nhiệm vụ được giao, đánh giá kết quả. Một nhân viên có thể tham gia một dự án trong một thời gian rồi nghỉ, sau đó một thời gian có thể tham gia trở lại dự án đó.
+•	CSDL có các quan hệ giữa các bảng và có sự lookup dữ liệu để tiện việc nhập liệu.
+Chú ý: sau khi thiết kế CSDL hãy nhập dữ liệu cho 3 bảng, mỗi bảng ít nhất 3 records. 
+
+Bài 6: Quản lý thư viện
+
+Hãy thiết kế CSDL quản lý thư viện (QLThuVien.accdb) để lưu dữ liệu cho một thư viên cấp quận theo các miêu tả sau:
+•	CSDL lưu thông tin về: sách, tác giả, nhà xuất bản, độc giả, và mượn trả sách
+•	Thông tin về sách gồm: mã sách, tên sách, nhà xuất bản, năm xuất bản, các tác giả.
+•	Mỗi sách chỉ thuộc một nhà xuất bản, một nhà xuất bản có nhiều sách.
+•	Một sách có thể có nhiều tác giả, một tác giả có thể có nhiều sách.
+•	Một độc giả có thể mượn nhiều sách, một sách có thể cho nhiều độc giả mượn.
+•	Một độc giả có thể mượn một quyển sách nhiều lần. CSDL phải lưu được tất cả lần mượn sách của độc giả.
+•	Mỗi lần mượn trả sách của độc giả cần lưu thông tin: ngày giờ mượn, ngày giờ trả, tình trạng sách khi mượn, tình trạng sách khi trả.
+•	CSDL phải có các mối quan hệ ràng buộc dữ liệu giữa các bảng và có sự lookup dữ liệu để tiện việc nhập liệu cho khóa ngoại.
+Chú ý: CSDL phải có relationship có bắt lỗi tham chiếu dữ liệu giữa các bảng, và có tạo look-up combo box cho tất cả các thuộc tính khóa ngoại. Mỗi bảng phải nhập tối thiểu 2 hàng dữ liệu.
+
+Bài 7: Quản lý bán hàng
+Hãy thiết kế CSDL quản lý bán hàng (QLBanHang.accdb) để lưu dữ liệu cho một cửa hàng:
+Các thông tin cần thiết để thiết kế cơ sở dữ liệu (CSDL) quản lý bán hàng là:
+•	CSDL bán hàng lưu các thông tin về: khách hàng, đơn hàng, nhân viên, hàng hóa
+•	Thông tin về khách hàng và nhân viên cần lưu: mã, họ, tên, ngày sinh, giới tính, địa chỉ, và số điện thoại
+•	Thông tin về đơn hàng cần lưu: mã đơn hàng, ngày mua, tiền vận chuyển, khách hàng mua, nhân viên bán hàng và các hàng hóa đơn hàng mua. 
+•	Một đơn hàng do một nhân viên bán, và một nhân viên có thể bán nhiều đơn hàng
+•	Một đơn hàng do một khách hàng mua, và một khách hàng có thể mua nhiều đơn hàng
+•	Một đơn hàng có thể mua nhiều hàng hóa, và một hàng hóa có thể bán cho nhiều đơn hàng
+•	Thông tin về hàng hóa cần lưu: mã, tên, đơn vị tính, đơn giá niêm yết
+•	Thông tin về một hàng hóa bán cho một đơn hàng cần lưu: đơn giá bán và số lượng bán
+•	CSDL phải có các mối quan hệ ràng buộc dữ liệu giữa các bảng và có sự lookup dữ liệu (dung ComboBox) để tiện việc nhập liệu cho khóa ngoại.
+Chú ý: CSDL phải có relationship có bắt lỗi tham chiếu dữ liệu giữa các bảng, và có tạo look-up combo box cho tất cả các thuộc tính khóa ngoại. Mỗi bảng phải nhập tối thiểu 2 hàng dữ liệu.
+
+Bài 8: Quản lý chuyến bay
+Hãy thiết kế một cơ sở dữ liệu (QLChuyenBay.accdb) để lưu dữ liệu quản lý chuyến bay cho một công ty hàng không. Các thông tin cần thiết để thiết kế CSDL là:
+•	Một tuyến bay có nhiều chuyến bay, như trong tuần vừa qua tuyến Hà nội – TP.HCM có 30 chuyến và tuyến TP.HCM – Hà nội có 32 chuyến
+•	Một chuyến bay chở nhiều hành khách, nhiều tiếp viên, và có 1 phi công chính và 2 phi công phụ
+•	Một phi công có thể lái chính trong chuyến này nhưng có thể là lái phụ trong chuyến khác
+•	Thông tin cần lưu về một chuyến bay là máy bay, tuyến bay, ngày giờ cất cánh, ngày giờ hạ cánh, phi công chính, các phi công phụ, các tiếp viên và các hành khách.
+•	Thông tin cá nhân (như họ tên, ngày sinh, điện thoại) của các phi công, tiếp viên, hành khách cũng được lưu
+•	Thông tin chi tiết về các máy bay cũng được lưu như hãng sản xuất, năm sản xuất, số hiệu model, số chổ ngồi, trọng tải
+Chú ý: 
+	CSDL phải có các mối quan hệ ràng buộc dữ liệu giữa các bảng và có sự lookup dữ liệu (dùng ComboBox) để tiện việc nhập liệu cho khóa ngoại.
+	CSDL phải có relationship có bắt lỗi tham chiếu dữ liệu giữa các bảng, và có tạo look-up combo box cho tất cả các thuộc tính khóa ngoại. Mỗi bảng phải nhập tối thiểu 2 hàng dữ liệu.
